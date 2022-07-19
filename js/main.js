@@ -25,3 +25,17 @@ btn.addEventListener('click', function (e) {
     newLi.appendChild(newSpan);
     list.appendChild(newLi);
 })
+
+searchInput = document.querySelector("input[placeholder='search'");
+searchInput.addEventListener('keyup', function (e) {
+    var searchedTitle = searchInput.value.toLowerCase();
+    var items = Array.from(document.querySelectorAll("li"));
+    items.forEach(function (element) {
+        if (element.textContent.toLowerCase().indexOf(searchedTitle) != -1) {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    })
+
+})
