@@ -6,3 +6,14 @@ list.addEventListener("click", function (e) {
         list.removeChild(element);
     }
 })
+
+addElement = document.forms['list-of-elements'];
+
+
+btn = document.querySelector("#list-of-elements button");
+btn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    inputvalue = document.querySelector('input[type="text"]').value;
+    console.log(inputvalue);
+})
