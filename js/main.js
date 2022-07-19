@@ -15,7 +15,8 @@ btn = document.querySelector("#list-of-elements button");
 btn.addEventListener('click', function (e) {
     e.preventDefault();
 
-    inputvalue = document.querySelector('#element-adder').value;
+    inputter = document.querySelector('#element-adder');
+    inputvalue = inputter.value;
 
     const newLi = document.createElement("li");
     const newSpan = document.createElement("span");
@@ -24,6 +25,9 @@ btn.addEventListener('click', function (e) {
 
     newLi.appendChild(newSpan);
     list.appendChild(newLi);
+
+    inputter.value = "";
+
 })
 
 searchInput = document.querySelector("#searchbar");
