@@ -15,7 +15,7 @@ btn = document.querySelector("#list-of-elements button");
 btn.addEventListener('click', function (e) {
     e.preventDefault();
 
-    inputvalue = document.querySelector('input[type="text"]').value;
+    inputvalue = document.querySelector('#element-adder').value;
 
     const newLi = document.createElement("li");
     const newSpan = document.createElement("span");
@@ -26,7 +26,7 @@ btn.addEventListener('click', function (e) {
     list.appendChild(newLi);
 })
 
-searchInput = document.querySelector("input[placeholder='search'");
+searchInput = document.querySelector("#searchbar");
 searchInput.addEventListener('keyup', function (e) {
     var searchedTitle = searchInput.value.toLowerCase();
     var items = Array.from(document.querySelectorAll("li"));
